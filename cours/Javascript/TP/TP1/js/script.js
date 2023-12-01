@@ -18,7 +18,7 @@ if (confirmation) {
             alert("Réponse invalide !");
             continue; // Ignorer cet essai et revenir au début de la boucle
         } else if (essai === 10) {
-            // Si les 10 essais sont dépassés, afficher un message d'échec
+            // Si les 10 essais sont dépassés, afficher un message d'échec, la partie est perdue
             alert("ECHEC : le nombre à trouver était " + nbAleatoire + " !");
             break; // Sortir de la boucle
         }

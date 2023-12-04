@@ -48,8 +48,8 @@ h1+p{
 
     /* Classe utilisée par JS pour colorer le premier bouton */
 
-.yellow {
-    background-color: yellow !important;
+.buttons-container .yellow {
+    background-color: yellow;
 }
 
 

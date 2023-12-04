@@ -6,6 +6,8 @@ let rectangle1 = document.querySelector('#click');
 rectangle1.addEventListener('click', function() {
     this.classList.toggle('yellow');
 
+
+    // Le poids est plus important en passant par le Javascript
     // this.style.backgroundColor = 'red';
 });
 
@@ -52,10 +54,3 @@ let p = document.querySelector('div>p')
 rectangle5.addEventListener('keyup', function () {
     p.textContent = input.value;
 });
-
-
-
-
-
-
-

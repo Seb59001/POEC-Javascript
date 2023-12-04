@@ -48,12 +48,20 @@ h1+p{
 
     /* Classe utilisée par JS pour colorer le premier bouton */
 
-
+.yellow {
+    background-color: yellow !important;
+}
 
 
     /* Classe utilisée par JS pour renverser le deuxième bouton */
 
-
+.rotate {
+    transform: rotate(180deg); /* Équivalent à rotateZ(45deg) */
+}
 
 
     /* Classe utilisée par JS pour grossir le troisième bouton */
+
+.bigger {
+    zoom: 200%;
+}

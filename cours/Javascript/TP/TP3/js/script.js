@@ -48,7 +48,7 @@ let rectangle5 = document.querySelector('#live');
 
 let input = document.querySelector('div>input');
 
-let p = document.querySelector('div>p')
+let p = document.querySelector('div>p');
 
 
 rectangle5.addEventListener('keyup', function () {

@@ -4,7 +4,7 @@ let footer = document.createElement('footer');
 
 let socialNav = document.createElement('nav');
 
-socialNav.className = 'social_nav'
+socialNav.className = 'social_nav';
 
 let body = document.querySelector('body');
 
@@ -75,11 +75,44 @@ a3.append(i3);
 
 let otherNav = document.createElement('nav');
 
+otherNav.className = 'other_nav';
+
+let ulOtherNav = document.createElement('ul');
+
+otherNav.append(ulOtherNav);
+
+let li4 = document.createElement('li');
+li4.classList.add("copyright");
+
+ulOtherNav.append(li4);
+
+li4.textContent = "@Copyright HedghogInLove";
 
 
-console.log(otherNav);
+let li5 = document.createElement('li');
 
-console.log(socialNav);
+ulOtherNav.append(li5);
+
+let a4 = document.createElement('a');
+
+a4.setAttribute('href', '#');
+a4.textContent = "C.G.U"
+
+li5.append(a4);
+
+
+let li6 = document.createElement('li');
+
+ulOtherNav.append(li6);
+
+let a5 = document.createElement('a');
+
+a5.setAttribute('href', '#');
+a5.textContent = "Mentions légales";
+
+li6.append(a5);
+
+footer.append(otherNav);
 
 
 //--------------------------------------- Construction du footer

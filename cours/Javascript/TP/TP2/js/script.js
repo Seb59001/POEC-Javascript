@@ -1,4 +1,4 @@
-// Création du noeuds : footer 
+// Création du noeuds : footer
 
 let footer = document.createElement('footer');
 
@@ -71,6 +71,9 @@ i3.classList.add('fa-brands');
 i3.classList.add('fa-pinterest');
 
 a3.append(i3);
+
+
+let otherNav = document.createElement('nav');
 
 
 

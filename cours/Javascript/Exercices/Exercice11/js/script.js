@@ -3,7 +3,7 @@ function afficherOverLaid() {
     // Créer un élément div pour l'overlay moche
     let overlay = document.createElement('div');
 
-    // Ajout d'un id à la div 
+    // Ajout d'un id à la div
     overlay.className = 'overlaid';
 
     // Sélectionner le conteneur où l'overlay sera ajouté

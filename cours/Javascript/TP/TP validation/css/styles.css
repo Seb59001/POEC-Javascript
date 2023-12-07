@@ -1,0 +1,1448 @@
+/* Format mobile */
+
+
+@media screen and (max-width: 749px) {
+
+
+    /* CSS page d'accueil */
+
+    /* Header commun à chaque page */
+
+    /* CSS sur la balise body */
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Classe Header qui définit l'en tête commun à chaque page */
+    .header {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+    }
+
+    /* Div qui contient le titre principal de la page */
+    #header-home-page {
+        background-image: url("../images/banner.jpg");
+        background-size: cover;
+        background-position: top;
+        height: 15rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    /* Titre principal de la page avec une mise en forme commune sur chaque page */
+    h1 {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        border: 2px solid white;
+        margin: 0 auto;
+        z-index: 2;
+        text-transform: uppercase;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+
+    /* Un overlay qui permet de calquer un dégradé de couleur transparent sur le header */
+    .color-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(31, 191, 184, 0.54), #0A415B);
+        z-index: 1;
+    }
+
+    /* Contenu de la page d'accueil */
+
+    /* Classe qui représente une div contenant le contenu principal de la page d'accueil*/
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Classe qui représente les trois div qui sont présentes dans la classe .content */
+    .content-item {
+        margin-top: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Calque qui vient se mettre avant le contenu pour un effet de transparence comme sur la maquette, ici on définit la position de ce calque et sa forme */
+    #firstContent::before,
+    #secondContent::before,
+    #thirdContent::before,
+    #fourthContent::before {
+        border-radius: 50%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    /* Les trois id représentent chaque .content-item de manière particulière pour leur appliquer une couleur, on définit la couleur particulière de chaque calque */
+    #firstContent::before {
+        background-color: rgba(31, 191, 184, 0.54)
+    }
+
+    #secondContent::before {
+        background-color: rgba(25, 120, 165, 0.54);
+    }
+
+    #thirdContent::before {
+        background-color: rgba(3, 17, 99, 0.54);
+    }
+
+    #fourthContent::before {
+        background-color: rgba(2, 8, 42, 0.541);
+    }
+
+    /* Application d'un background image en particulier pour chaque contenu */
+    #firstContent {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 60%;
+        background-image: url("../images/visit.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    #secondContent {
+        background-image: url("../images/price.jpg");
+        background-size: cover;
+        height: 15rem;
+        width: 15rem;
+        border-radius: 60%;
+        background-position: right;
+    }
+
+    #thirdContent {
+        background-image: url("../images/training.jpg");
+        background-size: cover;
+        height: 15rem;
+        width: 15rem;
+        border-radius: 60%;
+        background-position: center;
+    }
+
+    #fourthContent {
+        background-image: url("../images/turtle.jpg");
+        background-size: cover;
+        height: 15rem;
+        width: 15rem;
+        border-radius: 60%;
+        background-position: center;
+    }
+
+    /* Mise en forme du lien qui apparaît en bas à droite de chaque image */
+    .a-img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        z-index: 2;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #p1-img {
+        background: #1FBFB8;
+    }
+
+    #p2-img {
+        background: #1978A5;
+    }
+
+    #p3-img {
+        background: #031163;
+    }
+
+
+
+
+    /* footer commun à chaque page */
+
+    /* div qui contient toute la partie concernant le footer */
+    .footer {
+        margin-top: 2rem;
+        background: rgb(31, 191, 187);
+        background: linear-gradient(90deg, rgba(31, 191, 187, 1) 0%, rgba(25, 120, 165, 1) 49%, rgba(25, 44, 165, 1) 100%);
+        color: white;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Titre principal contenu dans le footer */
+    .footer h2 {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        border: 2px solid white;
+        margin: 5% auto;
+        padding: 5px;
+        z-index: 2;
+        text-transform: uppercase;
+        border-radius: 5px;
+        width: 300px;
+    }
+
+    /* Mise en forme des liens contenus dans le footer */
+    .footer-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .legal-links a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .social-icon {
+        color: white;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    .social-icon:hover {
+        text-decoration: none;
+    }
+
+    /* CSS du contenu de la page visiter notre refuge  */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Ces classes représentent les div présentes sur les trois pages de contenus, ces propriétés sont communes à chaque page pour leur contenu */
+    .visit-content,
+    .prices-content,
+    .training-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    /* Contenu du header de chaque page de contenu (sous le header principal), ces headers sont similaires avec quelques subtilités qui diffèrent entre chaque page,  */
+    .header-content {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 15rem;
+        display: flex;
+        position: relative;
+        top: 0;
+    }
+
+    /* Division de ce contenu par id afin d'appliquer des images spécifiques */
+    #header-content-1 {
+        background-image: url("../images/visit.jpg");
+    }
+
+    #header-content-2 {
+        background-image: url("../images/price.jpg");
+    }
+
+    #header-content-3 {
+        background-image: url("../images/training.jpg");
+    }
+
+    #header-content-4 {
+        background-image: url("../images/turtle.jpg");
+    }
+
+    /* Mise en forme du paragraphe contenu dans le header-content */
+    .p-header {
+        color: white;
+        width: 100%;
+        height: 25%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    /* Background spécifique pour le paragraphe du header de chaque page*/
+    #p-header-1 {
+        background-color: rgba(31, 191, 184, 0.54);
+    }
+
+    #p-header-2 {
+        background-color: rgba(25, 120, 165, 0.54);
+    }
+
+    #p-header-3 {
+        background-color: rgba(3, 17, 99, 0.54)
+    }
+
+    #p-header-4 {
+        background-color: rgba(2, 8, 42, 0.541);
+    }
+
+    /* Application d'un inline-block sur les titres afin d'ajouter l'icône sur la même ligne que le titre */
+    #title-visit,
+    #title-prices,
+    #title-training {
+        display: inline-block;
+    }
+
+    /* Classe qui représente l'icône House */
+    .fa-solid.fa-house {
+        margin: 40px 10px 40px 25px;
+    }
+
+    /* Margin appliqué sur chaque section de chaque page de contenu */
+    .visit-body-content-section-one,
+    .visit-body-content-section-two,
+    .prices-body-content-section-one,
+    .prices-body-content-section-two,
+    .training-body-content-section-one,
+    .turtles-body-content {
+        margin: 0 15px;
+    }
+
+
+    /* Application de couleur sur les titres et icônes */
+    .visit-body-content-section-one .fa-archway+h2,
+    .fa-solid.fa-archway {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: #1FBFB8;
+    }
+
+    /* Application de couleur sur les titres et icônes */
+    .visit-body-content-section-two .fa-clock+h2,
+    .fa-solid.fa-clock {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: #1FBFB8;
+    }
+
+    /* Application de couleur sur les titres*/
+    .prices-body-content-section-two h2,
+    .prices-body-content-section-one h2 {
+        display: inline-block;
+        color: #1978A5;
+    }
+
+    /* Application de couleur sur les titres*/
+    .training-body-content-section-one h2,
+    .turtles-body-content h2 {
+        display: inline-block;
+        color: #031163;
+        margin-bottom: 1rem;
+    }
+
+    /* Application de couleur sur les icônes*/
+    .fa-solid.fa-clock.prices {
+        color: #1978A5
+    }
+
+    /* Application de couleur sur les icônes*/
+    .fa-solid.fa-tag.prices {
+        color: #1978A5
+    }
+
+    /* Application de couleur sur les icônes*/
+    .fa-solid.fa-list-check {
+        color: #031163;
+        font-size: 1.5rem;
+    }
+
+    .fa-solid.fa-water {
+        color: #031163;
+        font-size: 1.5rem;
+    }
+
+    .turtles-body-content {
+        width: 100%;
+    }
+
+    .div-image-turtles {
+        border: black solid 1px;
+        width: 40%;
+        margin: auto;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+
+    .image-turtles {
+        width: 100%;
+    }
+
+    .p-turtles {
+        text-align: center;
+        margin: 15px;
+    }
+
+    .image-turtles {
+        width: 100%;
+        transition: transform 0.5s linear;
+        transform-origin: center top;
+        cursor: pointer;
+    }
+
+    .image-turtles:hover {
+        transform: scale(1.2);
+        overflow: hidden;
+        filter: grayscale(70%);
+    }
+
+    .p-turtles {
+        text-align: center;
+        margin: 15px;
+    }
+
+    #p-newsletter,
+    .fa-sharp.fa-solid.fa-envelope-open-text {
+        margin-top: 40px;
+        font-size: 1.5rem;
+        color: #031163;
+        display: inline-block;
+    }
+
+    .div-label-newsletter {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .newsletter-title {
+        margin-left: 22%;
+    }
+
+    .div-input-newsletter {
+        text-align: center;
+    }
+
+    #input-newsletter,
+    input[type="submit"] {
+        height: 30px;
+        margin-bottom: 40px;
+    }
+
+    #input-newsletter {
+        width: 170px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    input[type="submit"] {
+        padding: 0 10px;
+        background-color: #031163;
+        color: white;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-left: -5px;
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.815);
+        /* Fond semi-transparent noir */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        /* Assurez-vous que l'overlay est au-dessus de tout le reste */
+    }
+
+    .overlay img {
+        max-width: 100%;
+        max-height: 100vh;
+    }
+}
+
+
+
+/* Format tablette */
+
+
+
+@media screen and (min-width: 750px) and (max-width: 1399px) {
+
+    /* CSS sur la balise body */
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+    /* Classe Header qui définit l'en tête commun à chaque page */
+    .header {
+        position: relative;
+        width: 100%;
+    }
+
+
+    /* Div qui contient le titre principal de la page */
+    #header-home-page {
+        background-image: url("../images/banner.jpg");
+        background-size: cover;
+        background-position: top;
+        height: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* Titre principal de la page avec une mise en forme commune sur chaque page */
+    h1 {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        border: 2px solid white;
+        margin: 0 5%;
+        z-index: 2;
+        text-transform: uppercase;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+
+    /* Un overlay qui permet de calquer un dégradé de couleur transparent sur le header */
+    .color-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(31, 191, 184, 0.54), #0A415B);
+        z-index: 1;
+    }
+
+    /* Contenu de la page d'accueil */
+
+
+    /* Classe qui représente une div contenant le contenu principal de la page d'accueil*/
+    .content {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 5% 2%;
+    }
+
+    /* Classe qui représente les trois div qui sont présentes dans la classe .content */
+    .content-item {
+        position: relative;
+        display: inline-block;
+    }
+
+    #firstContent,
+    #secondContent,
+    #thirdContent,
+    #fourthContent {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 60%;
+        background-size: cover;
+    }
+
+    /* Les trois id représentent chaque .content-item de manière particulière pour leur appliquer une couleur, on définit la couleur particulière de chaque calque */
+    #firstContent {
+        background-image: url("../images/visit.jpg");
+        background-position: center;
+    }
+
+    #secondContent {
+        background-image: url("../images/price.jpg");
+        background-position: right;
+    }
+
+    #thirdContent {
+        background-image: url("../images/training.jpg");
+        background-position: center;
+    }
+
+    #fourthContent {
+        background-image: url("../images/turtle.jpg");
+        background-position: center;
+    }
+
+    /* Calque qui vient se mettre avant le contenu pour un effet de transparence comme sur la maquette, ici on définit la position de ce calque et sa forme */
+    #firstContent::before,
+    #secondContent::before,
+    #thirdContent::before,
+    #fourthContent::before {
+        border-radius: 50%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    /* Les trois id représentent chaque .content-item de manière particulière pour leur appliquer une couleur, on définit la couleur particulière de chaque calque */
+    #firstContent::before {
+        background-color: rgba(31, 191, 184, 0.54)
+    }
+
+    #secondContent::before {
+        background-color: rgba(25, 120, 165, 0.54);
+    }
+
+    #thirdContent::before {
+        background-color: rgba(3, 17, 99, 0.54);
+    }
+
+    #fourthContent::before {
+        background-color: rgba(2, 8, 42, 0.541);
+    }
+
+    /* Mise en forme du lien qui apparaît en bas à droite de chaque image */
+    .a-img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        z-index: 2;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #p1-img {
+        background: #1FBFB8;
+    }
+
+    #p2-img {
+        background: #1978A5;
+    }
+
+    #p3-img {
+        background: #031163;
+    }
+
+    /* footer commun à chaque page */
+
+    /* div qui contient toute la partie concernant le footer */
+    .footer {
+        margin-top: 2rem;
+        background: rgb(31, 191, 187);
+        background: linear-gradient(90deg, rgba(31, 191, 187, 1) 0%, rgba(25, 120, 165, 1) 49%, rgba(25, 44, 165, 1) 100%);
+        color: white;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Titre principal contenu dans le footer */
+    .footer h2 {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        border: 2px solid white;
+        margin: 5% auto;
+        padding: 5px;
+        z-index: 2;
+        text-transform: uppercase;
+        border-radius: 5px;
+        width: 300px;
+    }
+
+    /* Mise en forme des liens contenus dans le footer */
+    .footer-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .legal-links a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .social-icon {
+        color: white;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    .social-icon:hover {
+        text-decoration: none;
+    }
+
+    /* CSS du contenu de la page visiter notre refuge  */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .visit-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    /* Contenu du header de chaque page de contenu (sous le header principal), ces headers sont similaires avec quelques subtilités qui diffèrent entre chaque page,  */
+    .header-content {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 15rem;
+        display: flex;
+        position: relative;
+        top: 0;
+    }
+
+    /* Division de ce contenu par id afin d'appliquer des images spécifiques */
+    #header-content-1 {
+        background-image: url("../images/visit.jpg");
+    }
+
+    #header-content-2 {
+        background-image: url("../images/price.jpg");
+    }
+
+    #header-content-3 {
+        background-image: url("../images/training.jpg");
+    }
+
+    #header-content-4 {
+        background-image: url("../images/turtle.jpg");
+    }
+
+    /* Mise en forme du paragraphe contenu dans le header-content */
+    .p-header {
+        color: white;
+        width: 100%;
+        height: 25%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Background spécifique pour le paragraphe du header de chaque page*/
+    #p-header-1 {
+        background-color: rgba(31, 191, 184, 0.54);
+    }
+
+    #p-header-2 {
+        background-color: rgba(25, 120, 165, 0.54);
+    }
+
+    #p-header-3 {
+        background-color: rgba(3, 17, 99, 0.54)
+    }
+
+    #p-header-4 {
+        background-color: rgba(2, 8, 42, 0.541);
+    }
+
+    /* Application d'un inline-block sur les titres afin d'ajouter l'icône sur la même ligne que le titre */
+    #title-visit,
+    #title-prices,
+    #title-training {
+        display: inline-block;
+    }
+
+    /* Classe qui représente l'icône House */
+    .fa-solid.fa-house {
+        margin: 40px 10px 40px 25px;
+    }
+
+    /* Margin appliqué sur chaque section de chaque page de contenu */
+    .visit-body-content-section-one,
+    .visit-body-content-section-two,
+    .prices-body-content-section-one,
+    .prices-body-content-section-two,
+    .training-body-content-section-one,
+    .turtles-body-content {
+        margin: 0 15px;
+    }
+
+
+    /* Application de couleur sur les titres et icônes */
+    .visit-body-content-section-one .fa-archway+h2,
+    .fa-solid.fa-archway {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: #1FBFB8;
+    }
+
+    /* Application de couleur sur les titres et icônes */
+    .visit-body-content-section-two .fa-clock+h2,
+    .fa-solid.fa-clock {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: #1FBFB8;
+    }
+
+    /* Application de couleur sur les titres*/
+    .prices-body-content-section-two h2,
+    .prices-body-content-section-one h2 {
+        display: inline-block;
+        color: #1978A5;
+    }
+
+    /* Application de couleur sur les titres*/
+    .training-body-content-section-one h2,
+    .turtles-body-content h2 {
+        display: inline-block;
+        color: #031163;
+        margin-bottom: 1rem;
+    }
+
+    /* Application de couleur sur les icônes*/
+    .fa-solid.fa-clock.prices {
+        color: #1978A5
+    }
+
+    /* Application de couleur sur les icônes*/
+    .fa-solid.fa-tag.prices {
+        color: #1978A5
+    }
+
+    /* Application de couleur sur les icônes*/
+    .fa-solid.fa-list-check,
+    .fa-solid.fa-water {
+        color: #031163;
+        font-size: 1.5rem;
+    }
+
+    .turtles-body-content {
+        width: 100%;
+    }
+
+    .turtles-body-content-images {
+        column-count: 2;
+        width: 100%;
+        text-align: center;
+    }
+
+    .div-image-turtles {
+        border: black solid 1px;
+        width: 60%;
+        /* Ajuste la largeur à 100% pour s'adapter aux colonnes */
+        margin: auto;
+        margin-top: 10px;
+        display: inline-block;
+        /* Permet au bloc de s'ajuster à la largeur de la colonne */
+        overflow: hidden;
+    }
+
+    .image-turtles {
+        width: 100%;
+        transition: transform 0.5s linear;
+        transform-origin: center top;
+        cursor: pointer;
+    }
+
+    .image-turtles:hover {
+        transform: scale(1.2);
+        overflow: hidden;
+        filter: grayscale(70%);
+    }
+
+    .p-turtles {
+        text-align: center;
+        margin: 15px;
+    }
+
+    #p-newsletter,
+    .fa-sharp.fa-solid.fa-envelope-open-text {
+        margin-top: 40px;
+        font-size: 1.5rem;
+        color: #031163;
+        display: inline-block;
+    }
+
+    .div-label-newsletter {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .newsletter-title {
+        margin-left: 25%;
+    }
+
+    .div-input-newsletter {
+        text-align: center;
+    }
+
+    #input-newsletter,
+    input[type="submit"] {
+        height: 30px;
+        margin-bottom: 40px;
+    }
+
+    #input-newsletter {
+        width: 300px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    input[type="submit"] {
+        padding: 0 10px;
+        background-color: #031163;
+        color: white;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-left: -5px;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.815);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .overlay img {
+        max-width: 90%;
+        max-height: 90vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1400px) {
+
+    /* CSS sur la balise body */
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Classe Header qui définit l'en tête commun à chaque page */
+    .header {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Div qui contient le titre principal de la page */
+    #header-home-page {
+        background-image: url("../images/banner.jpg");
+        background-size: cover;
+        background-position: top;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* Titre principal de la page avec une mise en forme commune sur chaque page */
+    h1 {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        border: 2px solid white;
+        margin: 0 auto;
+        z-index: 2;
+        text-transform: uppercase;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+
+    /* Un overlay qui permet de calquer un dégradé de couleur transparent sur le header */
+    .color-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(31, 191, 184, 0.54), #0A415B);
+        z-index: 1;
+    }
+
+    /* Classe qui représente une div contenant le contenu principal de la page d'accueil*/
+    .content {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 5% 2%;
+    }
+
+    /* Classe qui représente les trois div qui sont présentes dans la classe .content */
+    .content-item {
+        flex: 1;
+        max-width: 20%;
+        margin: 0 2rem;
+        position: relative;
+        display: inline-block;
+    }
+
+    #firstContent,
+    #secondContent,
+    #thirdContent,
+    #fourthContent {
+        width: 20%;
+        padding-top: 20%;
+        border-radius: 50%;
+        background-size: cover;
+    }
+
+    /* Les trois id représentent chaque .content-item de manière particulière pour leur appliquer une couleur, on définit la couleur particulière de chaque calque */
+    #firstContent {
+        background-image: url("../images/visit.jpg");
+        background-position: center;
+    }
+
+    #secondContent {
+        background-image: url("../images/price.jpg");
+        background-position: right;
+    }
+
+    #thirdContent {
+        background-image: url("../images/training.jpg");
+        background-position: center;
+    }
+
+    #fourthContent {
+        background-image: url("../images/turtle.jpg");
+        background-position: center;
+    }
+
+    /* Calque qui vient se mettre avant le contenu pour un effet de transparence comme sur la maquette, ici on définit la position de ce calque et sa forme */
+    #firstContent::before,
+    #secondContent::before,
+    #thirdContent::before,
+    #fourthContent::before {
+        border-radius: 50%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    /* Les trois id représentent chaque .content-item de manière particulière pour leur appliquer une couleur, on définit la couleur particulière de chaque calque */
+    #firstContent::before {
+        background-color: rgba(31, 191, 184, 0.54)
+    }
+
+    #secondContent::before {
+        background-color: rgba(25, 120, 165, 0.54);
+    }
+
+    #thirdContent::before {
+        background-color: rgba(3, 17, 99, 0.54);
+    }
+
+    #fourthContent::before {
+        background-color: rgba(2, 8, 42, 0.541);
+    }
+
+
+
+    /* Mise en forme du lien qui apparaît en bas à droite de chaque image */
+    .a-img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        z-index: 2;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #p1-img {
+        background: #1FBFB8;
+    }
+
+    #p2-img {
+        background: #1978A5;
+    }
+
+    #p3-img {
+        background: #031163;
+    }
+
+    /* footer commun à chaque page */
+
+    /* div qui contient toute la partie concernant le footer */
+    .footer {
+        background: rgb(31, 191, 187);
+        background: linear-gradient(90deg, rgba(31, 191, 187, 1) 0%, rgba(25, 120, 165, 1) 49%, rgba(25, 44, 165, 1) 100%);
+        color: white;
+        width: 100%;
+        height: 200px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Titre principal contenu dans le footer */
+    .footer h2 {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        border: 2px solid white;
+        margin: 5% auto;
+        padding: 5px;
+        z-index: 2;
+        text-transform: uppercase;
+        border-radius: 5px;
+        width: 300px;
+    }
+
+    /* Mise en forme des liens contenus dans le footer */
+    .footer-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .legal-links a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .social-icon {
+        color: white;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    .social-icon:hover {
+        text-decoration: none;
+    }
+
+
+    /* CSS du contenu de la page visiter notre refuge  */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .visit-content {
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+
+    /* Contenu du header de chaque page de contenu (sous le header principal), ces headers sont similaires avec quelques subtilités qui diffèrent entre chaque page,  */
+    .header-content {
+        background-image: url("../images/visit.jpg");
+        background-size: cover;
+        background-position: center;
+        min-width: 30%;
+        display: flex;
+        position: relative;
+        top: 0;
+    }
+
+    /* Division de ce contenu par id afin d'appliquer des images spécifiques */
+    #header-content-1 {
+        background-image: url("../images/visit.jpg");
+    }
+
+    #header-content-2 {
+        background-image: url("../images/price.jpg");
+    }
+
+    #header-content-3 {
+        background-image: url("../images/training.jpg");
+    }
+
+    #header-content-4 {
+        background-image: url("../images/turtle.jpg");
+    }
+
+    /* Mise en forme du paragraphe contenu dans le header-content */
+    .p-header {
+        color: white;
+        width: 100%;
+        height: 15%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Background spécifique pour le paragraphe du header de chaque page*/
+    #p-header-1 {
+        background-color: rgba(31, 191, 184, 0.54);
+    }
+
+    #p-header-2 {
+        background-color: rgba(25, 120, 165, 0.54);
+    }
+
+    #p-header-3 {
+        background-color: rgba(3, 17, 99, 0.54)
+    }
+
+    #p-header-4 {
+        background-color: rgba(2, 8, 42, 0.541);
+    }
+
+    /* Application d'un inline-block sur les titres afin d'ajouter l'icône sur la même ligne que le titre */
+    #title-visit,
+    #title-prices,
+    #title-training {
+        display: inline-block;
+    }
+
+
+    /* Classe qui représente l'icône House */
+    .fa-solid.fa-house {
+        margin: 40px 10px 40px 25px;
+    }
+
+    /* Margin appliqué sur chaque section de chaque page de contenu */
+    .visit-body-content-section-one,
+    .visit-body-content-section-two,
+    .prices-body-content-section-one,
+    .prices-body-content-section-two,
+    .training-body-content-section-one,
+    .turtles-body-content {
+        margin: 0 15px;
+    }
+
+
+
+    /* Application de couleur sur les titres et icônes */
+    .visit-body-content-section-one .fa-archway+h2,
+    .fa-solid.fa-archway {
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: #1FBFB8;
+    }
+
+
+    /* Application de couleur sur les titres et icônes */
+    .visit-body-content-section-two .fa-clock+h2,
+    .fa-solid.fa-clock {
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: #1FBFB8;
+    }
+
+    /* Margin bottom sur les paragraphes afin de créer de l'espacement comme sur la maquette*/
+    .visit-body-content-section-one p,
+    .visit-body-content-section-two p,
+    .prices-body-content-section-one p,
+    .prices-body-content-section-two p,
+    .training-body-content-section-one p {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Application de couleur sur les titres*/
+    .prices-body-content-section-two h2,
+    .prices-body-content-section-one h2,
+    .turtles-body-content h2 {
+        display: inline-block;
+        color: #1978A5;
+        margin-bottom: 2rem;
+    }
+
+    /* Application de couleur sur les titres*/
+    .training-body-content-section-one h2 {
+        display: inline-block;
+        color: #031163;
+        margin-bottom: 2rem;
+    }
+
+    /* Application de couleur sur les icônes*/
+    .fa-solid.fa-clock.prices {
+        color: #1978A5
+    }
+
+    /* Application de couleur sur les icônes*/
+    .fa-solid.fa-tag.prices {
+        color: #1978A5
+    }
+
+    /* Application de couleur sur les icônes*/
+    .fa-solid.fa-list-check,
+    .fa-solid.fa-water {
+        color: #031163;
+        font-size: 1.5rem;
+    }
+
+    .turtles-body-content {
+        width: 100%;
+    }
+
+    .turtles-body-content-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* Ajuste la justification pour centrer les colonnes */
+        width: 60%;
+        margin: 10px auto;
+    }
+
+    .div-image-turtles {
+        flex: 0 0 calc(50% - 50px);
+        margin: 10px;
+        border: black solid 1px;
+        overflow: hidden;
+        /* Empêche le dépassement du contenu de la div */
+    }
+
+    .image-turtles {
+        width: 100%;
+        transition: transform 0.5s linear;
+        transform-origin: center top;
+        cursor: pointer;
+    }
+
+    .image-turtles:hover {
+        transform: scale(1.2);
+        overflow: hidden;
+        filter: grayscale(70%);
+    }
+
+    .p-turtles {
+        text-align: center;
+        margin: 15px;
+    }
+
+    #p-newsletter,
+    .fa-sharp.fa-solid.fa-envelope-open-text {
+        margin-top: 40px;
+        font-size: 1.5rem;
+        color: #031163;
+        display: inline-block;
+    }
+
+    #label-newsletter {
+        display: block;
+        margin: 30px 0;
+    }
+
+    #input-newsletter,
+    input[type="submit"] {
+        display: inline-block;
+        margin-left: -5px;
+        height: 30px;
+        margin-bottom: 40px;
+    }
+
+    #input-newsletter {
+        width: 20%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    input[type="submit"] {
+        padding: 0 10px;
+        background-color: #031163;
+        color: white;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.815);
+        /* Fond semi-transparent noir */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        /* Assurez-vous que l'overlay est au-dessus de tout le reste */
+    }
+
+    .overlay img {
+        max-width: 100%;
+        max-height: 100vh;
+    }
+}

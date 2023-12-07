@@ -40,7 +40,6 @@ tabs.forEach((tab) => {
     });
 });
 
-
 // // Sélectionne tous les onglets pour y rattacher un écouteur d'évènement
 // document.querySelectorAll('div.tab-container .tabs .tab').forEach((tab) => {
 

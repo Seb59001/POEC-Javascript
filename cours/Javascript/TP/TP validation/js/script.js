@@ -1,3 +1,9 @@
+
+// Overlay
+
+
+// Sélection de toutes les images, pour chaque image on crée un écouteur d'événement au clic, qui appelle la fonction displayImage().
+
 document.querySelectorAll('img').forEach((image) => {
 
     image.addEventListener('click', function(){
@@ -47,10 +53,9 @@ function displayImage(image) {
     });
 
 
+    // Quitter l'overlay en cliquant en dehors de l'image
     overlay.addEventListener('click', function(event) {
-        if (!imageToOpen.contains(event.target)) {
             removeImage(overlay);
-        }
     });
 
 
@@ -63,6 +68,52 @@ function removeImage(overlay) {
     }
 }
 
+
+
+
+// Formulaire
+
+let inputMail = document.querySelector('#input-newsletter');
+
+let inputSubmit = document.querySelector('#input-submit');
+
+let inputGroup = document.querySelector('.div-input-newsletter')
+
+let form = document.querySelector('form');
+
+// Création d'une span vide contenant le futur message d'erreur
+let errorMessage = document.createElement('span');
+
+// Création d'une span vide contenant le futur message de succès
+let successMessage = document.createElement('span');
+
+// Ecouteur d'événements sur le bouton submit
+
+
+// Ecouteur d'événement à la soumission du formulaire, afinn d'afficher un message d'erreur ou de succès, selon si l'email inscrit a plus ou moins de 10 caractères
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let mail = inputMail.value;
+
+// Message d'erreur si l'utilisateur entre moins de 10 caractères
+    if (mail.length < 10) {
+        errorMessage.classList.toggle('error-message');
+        errorMessage.innerText = "Le champ doit contenir au moins 10 caractères";
+        errorMessage.style.color = "red";
+        inputGroup.append(errorMessage);
+
+        // Message de succès si l'adresse mail est valide
+
+    } else if (mail.length >= 10){
+        inputMail.remove();
+        inputSubmit.remove();
+        errorMessage.remove();
+        successMessage.classList.toggle('success-message');
+        successMessage.style.display = "inline-block";
+        successMessage.innerText = "Vous avez bien été inscrit à la newsletter !";
+        inputGroup.append(successMessage);
+    }
+});
 
 
 

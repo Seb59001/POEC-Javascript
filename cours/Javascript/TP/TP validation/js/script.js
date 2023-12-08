@@ -37,7 +37,7 @@ function displayImage(image) {
     let srcImageToOpen = image.dataset.image;
 
     // Attribution de l'attribut à l'image
-    
+
     imageToOpen.setAttribute('src', './images/images-galerie/Miniatures/' + srcImageToOpen);
 
     // insertion de l'image dans l'overlay
